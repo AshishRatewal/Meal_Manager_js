@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btns">
+            <span class="first_span color_class">Step 1</span>
+            <span class="second_span">Step 2</span>
+            <span class="third_span">Step 3</span>
+            <span class="last_span">Review</span>
+        </div>
+        <div class="inner_container first_page">
+            <form action="">
+                <label for="mealSelect">Please Select a meal</label>
+                <select name="selectMeal" id="mealSelect">
+                    <option value="" selected disabled>---</option>
+                    <option value="breakFast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+                <label for="noPeople">Please Enter no of People</label>
+                <input type="number" name="peopleNo" id="noPeople" min="1" max="5">
+                <input type="button" value="Next" name="nextBtn" class="nextBtn_one">
+            </form>
+        </div>
+        <div class="second_page hide">
+            <form action="">
+                <label for="selectRest">Please Select a Restaurant</label>
+                <select name="restSelect" id="selectRest">
+                </select>
+                <div class="second_page_btns">
+                    <input type="button" value="Previous" class="secondBtnPrev">
+                    <input type="button" value="Next" class="secondBtnNext">
+                </div>
+            </form>
+        </div>
+        <div class="third_page hide">
+            <form action="">
+                <div class="sameSelect">
+                    <div class="box_one">
+                        <label for="selectDish">Please Select a Dish</label>
+                        <select name="dishSelect" id="selectDish" class="checkLastClass">       
+                        </select>
+                    </div>
+                    <div class="box_two">
+                        <label for="selectSer">Please Enter No of Servings</label>
+                        <input type="number" name="serSelect" id="selectSer" class="selectSers" min="1" max="5" value=""> 
+                    </div>
+                    <br>
+                </div>
+                <div class="addMore">
+                    <input type="button" class="addMore_btn">
+                    <i class="fa fa-plus" aria-hidden="true"></i>    
+                </div>
+                <div class="third_page_btns">
+                    <input type="button" value="Previous" class="thirdPrevBtn">
+                    <input type="button" value="Next" class="thirdNextBtn">
+                </div>
+            </form>
+        </div>
+        <div class="last_page hide">
+            <table>
+                <tr>
+                    <td>Meal</td>
+                    <td class="putMeal"></td>
+                </tr>
+                <tr>
+                    <td>No. of People</td>
+                    <td class="putNoPeople"></td>
+                </tr>
+                <tr>
+                    <td>Restaurant</td>
+                    <td class="putRest"></td>
+                </tr>
+            </table>
+            <div class="specials_border">
+                <div class="same_data">
+                    Dishes
+                </div>
+                <div class="second_col">
+                    <div class="same_data">
+                        <div class="same_box putDishName"></div>
+                        <div class="same_box putDishNo"></div>
+                    </div>
+                    <div class="same_data">
+                        <div class="same_box putDishName"></div>
+                        <div class="same_box putDishNo"></div>
+                    </div>
+                    <div class="same_data">
+                        <div class="same_box putDishName"></div>
+                        <div class="same_box putDishNo"></div>
+                    </div>
+                    <div class="same_data">
+                        <div class="same_box putDishName"></div>
+                        <div class="same_box putDishNo"></div>
+                    </div>
+                    <div class="same_data">
+                        <div class="same_box putDishName"></div>
+                        <div class="same_box putDishNo"></div>
+                    </div>
+                    <div class="same_data">
+                        <div class="same_box putDishName"></div>
+                        <div class="same_box putDishNo"></div>
+                    </div>
+                    <div class="same_data">
+                        <div class="same_box putDishName"></div>
+                        <div class="same_box putDishNo"></div>
+                    </div>
+                </div>
+           </div>
+            <form action="">
+                <div class="last_page_btns">
+                    <!-- data presentation -->
+                    
+                    <input type="button" value="Previous" class="lastPrevBtn">
+                    <input type="button" value="Next" class="lastNextBtn">
+                </div>
+            </form>
+        </div>
+        <div class="review_page hide">
+            <h1 class="reviewContent">Your Item is successfully Ordered...</h1>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
